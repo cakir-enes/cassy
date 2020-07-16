@@ -6,7 +6,7 @@ def parse(inFile, outFile, fun, delimiter):
         csv_reader = csv.reader(csv_file, delimiter='\t')
         for row in csv_reader:
             try:
-                print(','.join([str(e) for e in fun(row)]), file=out)
+                print('\t'.join([str(e) for e in fun(row)]), file=out)
             except:
                 pass
     out.close()
